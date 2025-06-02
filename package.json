@@ -1,0 +1,36 @@
+{
+  "name": "supportql",
+  "version": "1.0.0",
+  "description": "An mcp server to query postgresql databases using natural language",
+  "main": "index.js",
+  "bin": {
+    "mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gokulkrishnan3113/SupportQL.git"
+  },
+  "author": "gokul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gokulkrishnan3113/SupportQL/issues"
+  },
+  "homepage": "https://github.com/Gokulkrishnan3113/SupportQL#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "pg": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.4",
+    "shx": "^0.4.0",
+    "typescript": "^5.8.3"
+  }
+}
