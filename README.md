@@ -28,13 +28,13 @@ This compiles the TypeScript files and generates the `dist` folder with `index.j
 
 ### 4. Configure with Claude Desktop (STDIO-based)
 
-#### 5.1 Launch Claude Desktop  
-If not already installed, you can download it from the official site: [claude.ai/download](https://claude.ai/download)
+#### 4.1 Launch Claude Desktop  
+If not already installed, you can download it from the official site: [Download](https://claude.ai/download)
 
-#### 5.2 Open the configuration file  
+#### 4.2 Open the configuration file of Claude Desktop
 Add the following configuration to the "mcpServers" section of your claude_desktop_config.json:
 
-#### 5.3 Add the following MCP server entry:
+#### 4.3 Add the following MCP server entry:
 
 ```json
 {
@@ -50,6 +50,6 @@ Add the following configuration to the "mcpServers" section of your claude_deskt
 }
 ```
 
-### 6. Start using SupportQL
+### 5. Start using SupportQL
 
 Once configured, you can begin querying your database using natural language.
