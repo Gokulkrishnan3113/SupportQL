@@ -28,8 +28,6 @@ if (args.length === 0) {
 }
 
 const databaseUrl = args[0];
-console.log("Connecting to database:", databaseUrl);
-console.log();
 
 
 const resourceBaseUrl = new URL(databaseUrl);
@@ -37,7 +35,6 @@ resourceBaseUrl.protocol = "postgres:";
 resourceBaseUrl.password = "";
 
 
-console.log(resourceBaseUrl);
 
 const pool = new pg.Pool({
     connectionString: databaseUrl,
