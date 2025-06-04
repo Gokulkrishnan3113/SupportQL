@@ -1,14 +1,20 @@
 {
-  "name": "supportql",
+  "name": "@gokul/supportql",
   "version": "1.0.0",
-  "description": "An mcp server to query postgresql databases using natural language",
-  "main": "index.js",
+  "description": "An MCP server to query PostgreSQL and MySQL databases using natural language",
+  "main": "dist/postgres.js",
   "bin": {
-    "mcp-server": "dist/index.js"
+    "supportql-postgres": "./dist/postgres.js",
+    "supportql-mysql": "./dist/mysql.js"
   },
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": "./dist/postgres.js",
+    "./postgres": "./dist/postgres.js",
+    "./mysql": "./dist/mysql.js"
+  },
   "scripts": {
     "build": "tsc && shx chmod +x dist/*.js",
     "prepare": "npm run build",
@@ -26,6 +32,7 @@
   "homepage": "https://github.com/Gokulkrishnan3113/SupportQL#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
+    "mysql2": "^3.14.1",
     "pg": "^8.16.0"
   },
   "devDependencies": {
