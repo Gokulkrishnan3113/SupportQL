@@ -1,5 +1,5 @@
 {
-  "name": "@gokul/supportql",
+  "name": "supportql",
   "version": "1.0.0",
   "description": "An MCP server to query PostgreSQL and MySQL databases using natural language",
   "main": "dist/postgres.js",
@@ -24,7 +24,7 @@
     "type": "git",
     "url": "git+https://github.com/Gokulkrishnan3113/SupportQL.git"
   },
-  "author": "gokul",
+  "author": "Gokul Krishnan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Gokulkrishnan3113/SupportQL/issues"
