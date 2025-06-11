@@ -1,48 +1,30 @@
 # SupportQL
-A MCP server that lets you query SQL databases without the need for SQL knowledge and just through natural language
+A MCP server that lets you query SQL databases (PostgreSQL and MySQL) using natural language — no SQL knowledge required.
+
+Supports `npx` execution for seamless plug-and-play use in Claude Desktop.
 
 ---
 
-## 🛠️ Getting Started
+## 🛠️ Configuration
 
-### 1. Clone the repo
+### 1. Claude Desktop
 
-```bash
-git clone https://github.com/Gokulkrishnan3113/SupportQL.git
-cd supportql
-```
+#### 1.1 Launch Claude Desktop  
+If not already installed, download it from the official site: [Download](https://claude.ai/download)
 
-### 2. Install dependencies
-
-```bash
-npm install
-```
-
-### 3. Build the MCP server (STDIO-based)
-
-```bash
-npm run build
-```
-
-This compiles the TypeScript files and generates the `dist` folder with `index.js`.
-
-### 4. Configure with Claude Desktop (STDIO-based)
-
-#### 4.1 Launch Claude Desktop  
-If not already installed, you can download it from the official site: [Download](https://claude.ai/download)
-
-#### 4.2 Open the configuration file of Claude Desktop
+#### 1.2 Open the configuration file of Claude Desktop
 Add the following configuration to the "mcpServers" section of your claude_desktop_config.json:
 
-#### 4.3 Add the following MCP server entry:
+#### 1.3 Add the following MCP server entry for **PostgreSQL**:
 
 ```json
 {
     "mcpServers": {
-        "SupportQL": {
-            "command": "node",
+        "PostgreSQL": {
+            "command": "npx",
             "args": [
-                "<path-to-your-project>/dist/index.js",
+                "-y",
+                "@gokul/supportql/postgres",
                 "<postgres-connection-string>"
             ]
         }
@@ -50,6 +32,29 @@ Add the following configuration to the "mcpServers" section of your claude_deskt
 }
 ```
 
-### 5. Start using SupportQL
+#### 1.4 Add the following MCP server entry for **MySQL**:
 
-Once configured, you can begin querying your database using natural language.
+```json
+{
+    "mcpServers": {
+        "MySQL": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@gokul/supportql/mysql",
+                "<mysql-connection-string>"
+            ]
+        }
+    }
+}
+```
+
+### 2. Start using SupportQL
+
+Once configured, you can begin querying your databases using natural language — right inside Claude Desktop.
+
+## 📄 License
+
+This project is licensed under the [ISC License](https://opensource.org/licenses/ISC).
+
+© 2025 Gokul Krishnan
