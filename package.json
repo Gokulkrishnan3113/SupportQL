@@ -1,5 +1,5 @@
 {
-  "name": "@gokul/supportql",
+  "name": "supportql",
   "version": "1.0.0",
   "description": "An MCP server to query PostgreSQL and MySQL databases using natural language",
   "main": "dist/postgres.js",

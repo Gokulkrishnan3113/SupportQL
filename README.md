@@ -24,7 +24,7 @@ Add the following configuration to the "mcpServers" section of your claude_deskt
             "command": "npx",
             "args": [
                 "-y",
-                "@gokul/supportql/postgres",
+                "supportql/postgres",
                 "<postgres-connection-string>"
             ]
         }
@@ -41,7 +41,7 @@ Add the following configuration to the "mcpServers" section of your claude_deskt
             "command": "npx",
             "args": [
                 "-y",
-                "@gokul/supportql/mysql",
+                "supportql/mysql",
                 "<mysql-connection-string>"
             ]
         }
