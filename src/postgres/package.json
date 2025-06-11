@@ -1,0 +1,27 @@
+{
+    "name": "@supportql/postgres",
+    "version": "1.0.0",
+    "description": "An MCP server to query PostgreSQL databases using natural language",
+    "main": "dist/index.js",
+    "bin": {
+        "supportql-postgres": "dist/index.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc && shx chmod +x ../../dist/postgres/index.js",
+        "watch": "tsc --watch"
+    },
+    "author": "Gokul Krishnan",
+    "license": "ISC",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.12.1",
+        "pg": "^8.16.0"
+    },
+    "devDependencies": {
+        "@types/pg": "^8.15.4",
+        "shx": "^0.4.0",
+        "typescript": "^5.8.3"
+    }
+}
