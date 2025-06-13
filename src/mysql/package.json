@@ -10,7 +10,8 @@
         "dist"
     ],
     "scripts": {
-        "build": "tsc && shx chmod +x ../../dist/mysql/index.js",
+        "build": "tsc && shx chmod +x dist/*.js",
+        "prepare": "npm run build",
         "watch": "tsc --watch"
     },
     "author": "Gokul Krishnan",
