@@ -1,25 +1,20 @@
 {
-  "name": "supportql",
-  "version": "1.0.0",
-  "description": "An MCP server to query PostgreSQL and MySQL databases using natural language",
-  "main": "dist/postgres.js",
-  "bin": {
-    "supportql-postgres": "./dist/postgres.js",
-    "supportql-mysql": "./dist/mysql.js"
-  },
-  "files": [
-    "dist"
+  "name": "@supportql/mcp",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "src/postgres",
+    "src/mysql"
   ],
-  "exports": {
-    ".": "./dist/postgres.js",
-    "./postgres": "./dist/postgres.js",
-    "./mysql": "./dist/mysql.js"
-  },
+  "version": "1.0.0",
   "scripts": {
-    "build": "tsc && shx chmod +x dist/*.js",
-    "prepare": "npm run build",
-    "watch": "tsc --watch"
+    "build": "npm run build --workspaces",
+    "watch": "npm run watch --workspaces",
+    "publish-all": "npm publish --workspaces --access public",
+    "link-all": "npm link --workspaces"
   },
+  "description": "An MCP server to query PostgreSQL and MySQL databases using natural language",
+  "files": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Gokulkrishnan3113/SupportQL.git"
@@ -30,13 +25,7 @@
     "url": "https://github.com/Gokulkrishnan3113/SupportQL/issues"
   },
   "homepage": "https://github.com/Gokulkrishnan3113/SupportQL#readme",
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.12.1",
-    "mysql2": "^3.14.1",
-    "pg": "^8.16.0"
-  },
   "devDependencies": {
-    "@types/pg": "^8.15.4",
     "shx": "^0.4.0",
     "typescript": "^5.8.3"
   }
