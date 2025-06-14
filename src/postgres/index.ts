@@ -98,7 +98,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
     return {
         tools: [
             {
-                name: "query",
+                name: "postgres_query",
                 description: "Run a read-only SQL query",
                 inputSchema: {
                     type: "object",
@@ -112,7 +112,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
 });
 
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
-    if (request.params.name === "query") {
+    if (request.params.name === "postgres_query") {
         const sql = request.params.arguments?.sql as string;
 
         const client = await pool.connect();

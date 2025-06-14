@@ -86,7 +86,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
     return {
         tools: [
             {
-                name: "query",
+                name: "mysql_query",
                 description: "Run a read-only SQL query",
                 inputSchema: {
                     type: "object",
@@ -101,7 +101,7 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
 
 // Handle tool call (SQL execution)
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
-    if (request.params.name === "query") {
+    if (request.params.name === "mysql_query") {
         const sqlText = request.params.arguments?.sql as string;
 
         try {
