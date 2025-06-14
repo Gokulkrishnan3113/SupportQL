@@ -5,7 +5,14 @@ Supports `npx` execution for seamless plug-and-play use in Claude Desktop.
 
 ---
 
-## 🛠️ Configuration
+## Available Packages
+
+- **PostgreSQL**: `@supportql/postgres`
+- **MySQL**: `@supportql/mysql`
+
+---
+
+## 🛠️ Setup
 
 ### 1. Claude Desktop
 
@@ -20,11 +27,11 @@ Add the following configuration to the "mcpServers" section of your claude_deskt
 ```json
 {
     "mcpServers": {
-        "PostgreSQL": {
+        "SupportQL-Postgres": {
             "command": "npx",
             "args": [
                 "-y",
-                "supportql/postgres",
+                "@supportql/postgres",
                 "<postgres-connection-string>"
             ]
         }
@@ -37,11 +44,11 @@ Add the following configuration to the "mcpServers" section of your claude_deskt
 ```json
 {
     "mcpServers": {
-        "MySQL": {
+        "SupportQL-Mysql": {
             "command": "npx",
             "args": [
                 "-y",
-                "supportql/mysql",
+                "@supportql/mysql",
                 "<mysql-connection-string>"
             ]
         }
@@ -49,7 +56,9 @@ Add the following configuration to the "mcpServers" section of your claude_deskt
 }
 ```
 
-### 2. Start using SupportQL
+### 2. Restart Claude Desktop
+
+## Start using SupportQL
 
 Once configured, you can begin querying your databases using natural language — right inside Claude Desktop.
 
