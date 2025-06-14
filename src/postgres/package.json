@@ -1,13 +1,14 @@
 {
     "name": "@supportql/postgres",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "An MCP server to query PostgreSQL databases using natural language",
     "main": "dist/index.js",
     "bin": {
         "supportql-postgres": "dist/index.js"
     },
     "files": [
-        "dist"
+        "dist",
+        "README.md"
     ],
     "scripts": {
         "build": "tsc && shx chmod +x dist/*.js",

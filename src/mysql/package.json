@@ -1,13 +1,14 @@
 {
     "name": "@supportql/mysql",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "An MCP server to query MySQL databases using natural language",
     "main": "dist/index.js",
     "bin": {
         "supportql-mysql": "dist/index.js"
     },
     "files": [
-        "dist"
+        "dist",
+        "README.md"
     ],
     "scripts": {
         "build": "tsc && shx chmod +x dist/*.js",
