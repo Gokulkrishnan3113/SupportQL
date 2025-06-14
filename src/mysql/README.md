@@ -13,7 +13,7 @@ Natural language querying for MySQL databases through Claude Desktop.
    ```json
    {
      "mcpServers": {
-       "SupportQL-MySql": {
+       "SupportQL-Mysql": {
          "command": "npx",
          "args": [
            "-y",
